@@ -78,6 +78,7 @@ echo "LOCAL_INSTALL = True" >> cms/local_settings.py
 
 mkdir logs
 mkdir pids
+python manage.py makemigrations
 python manage.py migrate
 python manage.py loaddata fixtures/encoding_profiles.json
 python manage.py loaddata fixtures/categories.json
